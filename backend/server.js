@@ -8,6 +8,7 @@ import reviewRoutes from "./routes/reviewRoutes.js";
 import paymentRoute from "./routes/paymentRoute.js";
 import restaurantRoutes from "./routes/restaurantRoutes.js";
 import authRoutes from './routes/authRoute.js';
+import userRoutes from './routes/userRoutes.js';
 
 import "dotenv/config";
 // app config
@@ -29,6 +30,7 @@ app.use("/api/reviews", reviewRoutes);
 app.use("/api/payment", paymentRoute);
 app.use("/api/restaurant", restaurantRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/user", userRoutes); 
 
 
 app.get("/", (req, res) => {
