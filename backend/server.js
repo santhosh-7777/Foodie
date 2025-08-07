@@ -8,7 +8,7 @@ import reviewRoutes from "./routes/reviewRoutes.js";
 import paymentRoute from "./routes/paymentRoute.js";
 import restaurantRoutes from "./routes/restaurantRoutes.js";
 import authRoutes from './routes/authRoute.js';
-import userRoutes from './routes/userRoutes.js';
+import userRoutes from './routes/userRoute.js';
 
 import "dotenv/config";
 // app config
