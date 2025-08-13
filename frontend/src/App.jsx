@@ -18,6 +18,8 @@ import FAQ from "./components/FAQ/FAQ";
 import { Toaster } from "react-hot-toast";
 import LoadingAnimation from './components/LoadingAnimation';
 import ScrollToTop from "../utility/ScrollToTop";
+import "Foodie/frontend/src/components/FoodDetail/print.css";
+
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);

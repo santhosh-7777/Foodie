@@ -1,0 +1,51 @@
+/* Hide UI elements that shouldn't appear in print/PDF */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  /* Make the printable area use full width */
+  .food-detail-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 10mm !important;
+    box-shadow: none !important;
+  }
+
+  /* Better font for printing */
+  body {
+    font-family: Arial, sans-serif !important;
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  /* Ensure images are centered and not cropped */
+  .food-detail-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+
+  /* Remove background colors for cleaner prints */
+  .add-to-cart {
+    display: none !important;
+  }
+
+  /* Ensure sections don't break awkwardly */
+  .food-detail-info,
+  .info-section {
+    page-break-inside: avoid;
+  }
+
+  /* Optional header for branding in print/PDF */
+  .print-header {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10mm;
+  }
+}
