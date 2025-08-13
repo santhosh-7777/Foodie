@@ -7,7 +7,6 @@ import html2pdf from "html2pdf.js";
 import "./FoodDetail.css";
 import "./print.css"; 
 
-// ✅ Wrapper so react-to-print can attach a stable ref
 const PrintableSection = React.forwardRef(({ children }, ref) => (
   <div ref={ref}>{children}</div>
 ));
@@ -26,13 +25,11 @@ const FoodDetail = () => {
 
   const printRef = useRef(null);
 
-  // ✅ v3 API uses contentRef instead of content
   const handlePrint = useReactToPrint({
     contentRef: printRef,
     documentTitle: foodItem ? `${foodItem.name} - Foodie` : "Food Detail",
   });
 
-  // Ensure all images are loaded before generating PDF
   const ensureImagesLoaded = useCallback(async (node) => {
     const imgs = Array.from(node.querySelectorAll("img"));
     await Promise.all(
@@ -106,7 +103,6 @@ const FoodDetail = () => {
 
 
 
-      {/* ✅ Wrapped printable content so printRef is always attached */}
       <PrintableSection ref={printRef}>
 
         <div className="food-detail-container">
