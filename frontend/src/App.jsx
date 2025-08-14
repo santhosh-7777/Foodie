@@ -21,7 +21,7 @@ import ContactPage from "./pages/Contactpage";
 import { Toaster } from "react-hot-toast";
 import LoadingAnimation from "./components/LoadingAnimation";
 import ScrollToTop from "../utility/ScrollToTop";
-import "frontend/src/components/FoodDetail/print.css";
+import "./components/FoodDetail/print.css";
 import NotFound from "./pages/Notfound";
 
 const App = () => {
