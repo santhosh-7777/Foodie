@@ -96,8 +96,9 @@ const Navbar = ({ setShowLogin }) => {
         <Heart size={18} />
         <span>Wishlist</span>
         {Object.keys(wishlistItems).length > 0 && (
-          <div className="cart-badge">{Object.keys(wishlistItems).length}</div>
-        )}
+  <div className="wishlist-badge">{Object.keys(wishlistItems).length}</div>
+)}
+
       </Link>
       <Link
         to="/contact"

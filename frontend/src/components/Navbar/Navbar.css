@@ -506,7 +506,7 @@ body {
 .wishlist-badge {
   position: absolute;
   top: -6px;
-  right: -6px;
+  right: -6px; /* initial position */
   background-color: #ff4d6d;
   color: #fff;
   font-size: 12px;
@@ -515,4 +515,11 @@ body {
   padding: 2px 6px;
   min-width: 18px;
   text-align: center;
+  transition: transform 0.2s ease;
+}
+
+/* Shift 2px right on hover of wishlist icon */
+.navbar-right .nav-item:hover .wishlist-badge,
+.navbar-menu-desktop .nav-item:hover .wishlist-badge {
+  transform: translateX(2px);
 }
