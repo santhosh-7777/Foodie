@@ -1,13 +1,14 @@
 import React from 'react'
 import './Footer.css'
 import { assets } from '../../assets/frontend_assets/assets'
-import { IoHome } from "react-icons/io5";
+import { IoHome, IoLogoGithub } from "react-icons/io5";
 import { SlSpeech } from "react-icons/sl";
 import { CiDeliveryTruck } from "react-icons/ci";
 import { MdPrivacyTip } from "react-icons/md";
 import { MdAddCall } from "react-icons/md";
 import { IoIosMail } from "react-icons/io";
 import { Link } from "react-router-dom";
+
 
 
 const Footer = () => {
@@ -32,7 +33,7 @@ Order fresh, tasty meals with just a few taps.
                     <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
                         <img src={assets.linkedin_icon} alt="LinkedIn" /></a>
                     <a  href="https://github.com/Abhishek2634/Foodie" target="_blank" >
-                        <img src="/src/assets/frontend_assets/github(20).png" alt="Github" /></a>     
+                        <img src="/github(20).png" alt="Github" /></a>     
                 </div>
             </div>
             <div className='footer-content-center'>
