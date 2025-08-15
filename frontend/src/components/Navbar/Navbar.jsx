@@ -20,7 +20,8 @@ import {
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
-  const { getTotalCartAmount } = useContext(StoreContext);
+  const { cartItems, wishlistItems, toggleWishlist, getTotalCartAmount } =
+    useContext(StoreContext);
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [user, setUser] = useState(null);
 
@@ -94,6 +95,9 @@ const Navbar = ({ setShowLogin }) => {
       >
         <Heart size={18} />
         <span>Wishlist</span>
+        {Object.keys(wishlistItems).length > 0 && (
+          <div className="cart-badge">{Object.keys(wishlistItems).length}</div>
+        )}
       </Link>
       <Link
         to="/contact"
@@ -114,7 +118,7 @@ const Navbar = ({ setShowLogin }) => {
     </>
   );
 
-  const totalCartItems = Object.values(useContext(StoreContext).cartItems || {}).reduce(
+  const totalCartItems = Object.values(cartItems || {}).reduce(
     (sum, qty) => sum + qty,
     0
   );
@@ -133,6 +137,7 @@ const Navbar = ({ setShowLogin }) => {
 
         {/* Right action buttons */}
         <div className="navbar-right">
+          {/* Theme Toggle */}
           <button
             className="theme-toggle"
             onClick={toggleTheme}
@@ -141,6 +146,7 @@ const Navbar = ({ setShowLogin }) => {
             {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </button>
 
+          {/* Cart */}
           <div className="navbar-cart">
             <Link to="/cart" className="icon-button" aria-label="Go to cart">
               <ShoppingCart size={18} />
@@ -150,6 +156,7 @@ const Navbar = ({ setShowLogin }) => {
             </Link>
           </div>
 
+          {/* User / Auth */}
           {user ? (
             <div className="user-info">
               <div className="user-avatar">

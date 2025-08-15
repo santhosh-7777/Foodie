@@ -23,6 +23,7 @@ import LoadingAnimation from "./components/LoadingAnimation";
 import ScrollToTop from "../utility/ScrollToTop";
 import NotFound from "./pages/Notfound";
 import AboutPage from "./pages/AboutPage/AboutPage";
+import StoreContextProvider from "./components/context/StoreContext";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -42,7 +43,7 @@ const App = () => {
 
   return (
     <ThemeContextProvider>
-      <>
+      <StoreContextProvider> {/* ✅ Wrap the app with StoreContextProvider */}
         <Toaster position="top-right" reverseOrder={false} />
         {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
 
@@ -95,7 +96,7 @@ const App = () => {
           <Footer />
           <Chatbot /> {/* AI Food Assistant */}
         </div>
-      </>
+      </StoreContextProvider>
     </ThemeContextProvider>
   );
 };
