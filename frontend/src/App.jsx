@@ -24,7 +24,7 @@ import ScrollToTop from "../utility/ScrollToTop";
 import NotFound from "./pages/Notfound";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import ScrollToBottom from "./components/ScrollToBottomButton/ScrollToBottomButton";
-
+import ReferralProgram from "./components/Referrals/ReferralProgram";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -87,7 +87,7 @@ const App = () => {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/restaurants" element={<Restaurants />} />
             <Route path="/aboutpage" element={<AboutPage />} />
-
+            <Route path="/referral" element={<ReferralProgram />} />
             <Route path="/restaurant/:id" element={<RestaurantDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

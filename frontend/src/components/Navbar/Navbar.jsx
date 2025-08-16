@@ -103,14 +103,14 @@ const Navbar = ({ setShowLogin }) => {
         <Phone size={18} />
         <span>Contact</span>
       </Link>
-      <a
-        href="#faq"
-        className={`nav-item ${menu === "faq" ? "active" : ""}`}
-        onClick={(e) => handleNavMenuClick(e, "faq", "faq")}
+       <Link
+        to="/referral"
+        onClick={() => setMenu("referral")}
+        className={`nav-item ${menu === "referral" ? "active" : ""}`}
       >
-        <HelpCircle size={18} />
-        <span>FAQ</span>
-      </a>
+        <Menu size={18} />
+        <span>Refer & Earn</span>
+      </Link>
     </>
   );
 
