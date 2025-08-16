@@ -25,6 +25,7 @@ import "./components/FoodDetail/print.css";
 import NotFound from "./pages/Notfound";
 import AboutPage from "./pages/AboutPage/AboutPage";
 
+
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -50,6 +51,8 @@ const App = () => {
         <div className="app">
           <Navbar setShowLogin={setShowLogin} />
           <ScrollToTop />
+          <ScrollToBottom/>
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
