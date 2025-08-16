@@ -24,6 +24,8 @@ import ScrollToTop from "../utility/ScrollToTop";
 import NotFound from "./pages/Notfound";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import StoreContextProvider from "./components/context/StoreContext";
+import ScrollToBottom from "./components/ScrollToBottomButton/ScrollToBottomButton";
+
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -50,6 +52,8 @@ const App = () => {
         <div className="app">
           <Navbar setShowLogin={setShowLogin} />
           <ScrollToTop />
+          <ScrollToBottom/>
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
