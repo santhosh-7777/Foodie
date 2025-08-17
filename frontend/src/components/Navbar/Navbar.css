@@ -105,7 +105,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px; height: 40px;
+  width: 40px;height: 40px;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 .theme-toggle:hover { background: var(--accent-color); color: #fff; transform: rotate(180deg); }
 
@@ -284,7 +286,7 @@ body {
 
   .theme-toggle {
     padding:10px ;
-    width: 50px; height: 50px;
+    width: 40px; height: 40px;
   }
   .navbar-cart {
     width: 100%;
