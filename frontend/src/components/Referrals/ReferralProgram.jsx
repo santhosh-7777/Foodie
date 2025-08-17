@@ -1,25 +1,14 @@
-import  { useEffect, useState } from "react";
-import QRious from "qrious";
+import { useState } from "react";
 import "./ReferralProgram.css";
 
 const ReferralProgram = () => {
   const [referralCode] = useState("FRIEND50");
-  const [qrSrc, setQrSrc] = useState("");
- const [referrals] = useState([
-  { name: "John Doe", email: "john@example.com", status: "Completed", date: "2025-08-10" },
-  { name: "Jane Smith", email: "jane@example.com", status: "Pending", date: "2025-08-15" },
+  const [referrals] = useState([
+    { name: "John Doe", email: "john@example.com", status: "Completed", date: "2025-08-10" },
+    { name: "Jane Smith", email: "jane@example.com", status: "Pending", date: "2025-08-15" },
     { name: "Shubham", email: "Shubham@example.com", status: "Completed", date: "2025-08-10" },
-  { name: "Smith", email: "Smithane@example.com", status: "Pending", date: "2025-08-15" },
-]);
-
-  // Generate QR Code
-  useEffect(() => {
-    const qr = new QRious({
-      value: `https://myapp.com/signup?ref=${referralCode}`,
-      size: 150,
-    });
-    setQrSrc(qr.toDataURL());
-  }, [referralCode]);
+    { name: "Smith", email: "Smithane@example.com", status: "Pending", date: "2025-08-15" },
+  ]);
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(referralCode);
@@ -45,37 +34,33 @@ const ReferralProgram = () => {
           <span className="referral-code">{referralCode}</span>
           <button className="copy-btn" onClick={copyToClipboard}>Copy</button>
         </div>
-        <div className="qr-section">
-          <img src={qrSrc} alt="Referral QR" />
-          <p>Scan to sign up with your referral</p>
-        </div>
+
         {/* Share Buttons */}
-<div className="share-buttons">
-  <button
-    className="share-btn twitter"
-    onClick={() =>
-      window.open(
-        `https://twitter.com/intent/tweet?text=Join%20me%20and%20earn%20rewards!%20Use%20my%20referral%20code:%20${referralCode}`,
-        "_blank"
-      )
-    }
-  >
-    Share on Twitter
-  </button>
+        <div className="share-buttons">
+          <button
+            className="share-btn twitter"
+            onClick={() =>
+              window.open(
+                `https://twitter.com/intent/tweet?text=Join%20me%20and%20earn%20rewards!%20Use%20my%20referral%20code:%20${referralCode}`,
+                "_blank"
+              )
+            }
+          >
+            Share on Twitter
+          </button>
 
-  <button
-    className="share-btn whatsapp"
-    onClick={() =>
-      window.open(
-        `https://api.whatsapp.com/send?text=Join%20me%20and%20earn%20rewards!%20Use%20my%20referral%20code:%20${referralCode}`,
-        "_blank"
-      )
-    }
-  >
-    Share on WhatsApp
-  </button>
-</div>
-
+          <button
+            className="share-btn whatsapp"
+            onClick={() =>
+              window.open(
+                `https://api.whatsapp.com/send?text=Join%20me%20and%20earn%20rewards!%20Use%20my%20referral%20code:%20${referralCode}`,
+                "_blank"
+              )
+            }
+          >
+            Share on WhatsApp
+          </button>
+        </div>
       </div>
 
       {/* Stats */}
