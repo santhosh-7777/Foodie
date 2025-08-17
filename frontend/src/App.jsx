@@ -21,6 +21,7 @@ import ContactPage from "./pages/Contactpage";
 import { Toaster } from "react-hot-toast";
 import LoadingAnimation from "./components/LoadingAnimation";
 import ScrollToTop from "../utility/ScrollToTop";
+import "./components/FoodDetail/print.css";
 import NotFound from "./pages/Notfound";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import StoreContextProvider from "./components/context/StoreContext";
