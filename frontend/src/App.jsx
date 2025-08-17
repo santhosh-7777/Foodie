@@ -21,8 +21,10 @@ import ContactPage from "./pages/Contactpage";
 import { Toaster } from "react-hot-toast";
 import LoadingAnimation from "./components/LoadingAnimation";
 import ScrollToTop from "../utility/ScrollToTop";
+import "./components/FoodDetail/print.css";
 import NotFound from "./pages/Notfound";
 import AboutPage from "./pages/AboutPage/AboutPage";
+import StoreContextProvider from "./components/context/StoreContext";
 import ScrollToBottom from "./components/ScrollToBottomButton/ScrollToBottomButton";
 import ReferralProgram from "./components/Referrals/ReferralProgram";
 
@@ -44,7 +46,7 @@ const App = () => {
 
   return (
     <ThemeContextProvider>
-      <>
+      <StoreContextProvider> {/* ✅ Wrap the app with StoreContextProvider */}
         <Toaster position="top-right" reverseOrder={false} />
         {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
 
@@ -99,7 +101,7 @@ const App = () => {
           <Footer />
           <Chatbot /> {/* AI Food Assistant */}
         </div>
-      </>
+      </StoreContextProvider>
     </ThemeContextProvider>
   );
 };
