@@ -92,12 +92,12 @@ const App = () => {
             <Route path="/referral" element={<ReferralProgram />} />
             <Route path="/restaurant/:id" element={<RestaurantDetail />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/faq" element={<FAQ/>}/>
           </Routes>
 
           <ScrollToTopButton /> {/* floating button */}
           <CartSummaryBar />
           <AppDownload />
-          <FAQ />
           <Footer />
           <Chatbot /> {/* AI Food Assistant */}
         </div>

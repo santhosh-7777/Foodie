@@ -33,18 +33,14 @@ const Navbar = ({ setShowLogin }) => {
     setUser(storedUser);
   }, []);
 
-  const handleNavMenuClick = (event, menuName, id) => {
-    event.preventDefault();
+  const handleNavMenuClick = (menuName, id) => {
     setMenu(menuName);
-    if (id) {
       if (location.pathname !== "/") {
-        localStorage.setItem("scrollToMenu", "true");
-        navigate("/");
+        navigate("/", {state: {scrollTo: id } });
       } else {
         const section = document.getElementById(id);
         if (section) section.scrollIntoView({ behavior: "smooth" });
       }
-    }
   };
 
   const handleLogout = () => {
@@ -58,7 +54,17 @@ const Navbar = ({ setShowLogin }) => {
     <>
       <Link
         to="/"
-        onClick={() => setMenu("home")}
+        onClick={(e) => {
+          e.preventDefault();
+          setMenu("home");
+          if(location.pathname === "/"){
+            // already on home, just scroll to top
+            window.scrollTo({top: 0, behavior: "smooth"});
+          }
+          else{
+            navigate("/");
+          }
+        }}
         className={`nav-item ${menu === "home" ? "active" : ""}`}
       >
         <Home size={18} />
@@ -72,22 +78,24 @@ const Navbar = ({ setShowLogin }) => {
         <Utensils size={18} />
         <span>Restaurant</span>
       </Link>
-      <a
-        href="#explore-menu"
+      <Link
+        to="/"
+        state={{scrollTo: "explore-menu"}}
+        onClick={()=> setMenu("menu")}
         className={`nav-item ${menu === "menu" ? "active" : ""}`}
-        onClick={(e) => handleNavMenuClick(e, "menu", "explore-menu")}
       >
         <Menu size={18} />
         <span>Menu</span>
-      </a>
-      <a
-        href="#appdownload"
+      </Link>
+      <Link
+        to="/"
+        state={{scrollTo: "appdownload"}}
+        onClick={()=> setMenu("mobile-app")}
         className={`nav-item ${menu === "mobile-app" ? "active" : ""}`}
-        onClick={(e) => handleNavMenuClick(e, "mobile-app", "appdownload")}
       >
         <Smartphone size={18} />
         <span>Mobile App</span>
-      </a>
+      </Link>
       <Link
         to="/wishlist"
         onClick={() => setMenu("wishlist")}
@@ -108,6 +116,15 @@ const Navbar = ({ setShowLogin }) => {
         <Phone size={18} />
         <span>Contact</span>
       </Link>
+      <Link
+        to="/faq"
+        onClick={() => setMenu("faq")}
+        className={`nav-item ${menu === "faq" ? "active" : ""}`}
+      >
+        <HelpCircle size={18} />
+        <span>FAQ</span>
+      </Link>
+
        <Link
         to="/referral"
         onClick={() => setMenu("referral")}
