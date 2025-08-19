@@ -100,6 +100,16 @@ const Navbar = ({ setShowLogin }) => {
 )}
 
       </Link>
+
+      
+   <Link
+      to="/aboutus"
+      onClick={() => setMenu("aboutus")}
+      className={`nav-item ${menu === "aboutus" ? "active" : ""}`}
+    >
+      <HelpCircle size={18} />
+      <span>About Us</span>
+    </Link>
       <Link
         to="/contact"
         onClick={() => setMenu("contact-us")}
