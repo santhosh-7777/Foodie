@@ -9,10 +9,6 @@ import { MdAddCall } from "react-icons/md";
 import { IoIosMail } from "react-icons/io";
 import { BsQuestionCircle } from "react-icons/bs";  // ✅ FAQ icon
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-=======
-import { FaXTwitter } from "react-icons/fa6";
->>>>>>> upstream/main
 
 const Footer = () => {
   return (
@@ -31,7 +27,6 @@ const Footer = () => {
                 <div className="footer-social-icons">
                     <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"> 
                         <img src={assets.facebook_icon} alt="Facebook" />
-<<<<<<< HEAD
                     </a>
                     <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
                         <img src={assets.twitter_icon} alt="Twitter" />
@@ -42,16 +37,6 @@ const Footer = () => {
                     <a href="https://github.com/Abhishek2634/Foodie" target="_blank" >
                         <img src="/github(20).png" alt="Github" />
                     </a>     
-=======
-                        </a>
-
-                    <a href="https://x.com/Abhishek899620etc" target="_blank" rel="noopener noreferrer">
-                        <img src={assets.twitter_icon} alt="Twitter" /></a>
-                    <a href="https://www.linkedin.com/in/abhishekfarswal/" target="_blank" rel="noopener noreferrer">
-                        <img src={assets.linkedin_icon} alt="LinkedIn" /></a>
-                    <a  href="https://github.com/Abhishek2634/Foodie" target="_blank" >
-                        <img src="/github(20).png" alt="Github" /></a>     
->>>>>>> upstream/main
                 </div>
             </div>
 
@@ -60,14 +45,10 @@ const Footer = () => {
                 <h2 className='text'>COMPANY</h2>
                 <ul>
                     <li><IoHome className='icon' /><Link to="/"><span>Home</span></Link></li>
-<<<<<<< HEAD
                     <li><SlSpeech className='icon' /><span>About Us</span></li>
-=======
-                    <li><SlSpeech className='icon'  /><Link to="/aboutus"><span>About Us</span></Link></li>
->>>>>>> upstream/main
                     <li><CiDeliveryTruck className='icon' /><span>Delivery</span></li>
                     <li><MdPrivacyTip className='icon' /><span>Privacy Policy</span></li>
-                    <li><BsQuestionCircle className='icon' /><Link to="/faq"><span>FAQ</span></Link></li>
+                    <li><BsQuestionCircle className='icon' /><Link to="/faq"><span>FAQ</span></Link></li> {/* ✅ Added FAQ */}
                 </ul>
             </div>
 
