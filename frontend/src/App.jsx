@@ -94,12 +94,12 @@ const App = () => {
             <Route path="/restaurant/:id" element={<RestaurantDetail />} />
                <Route path="/aboutus" element={<AboutUs/>} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/faq" element={<FAQ/>}/>
           </Routes>
 
           <ScrollToTopButton /> {/* floating button */}
           <CartSummaryBar />
           <AppDownload />
-          <FAQ />
           <Footer />
           <Chatbot /> {/* AI Food Assistant */}
         </div>
