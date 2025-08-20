@@ -16,6 +16,8 @@ import {
   Moon,
   HelpCircle,
   Utensils,
+  Users,
+  Info,
 } from "lucide-react";
 
 const Navbar = ({ setShowLogin }) => {
@@ -110,6 +112,14 @@ const Navbar = ({ setShowLogin }) => {
       <HelpCircle size={18} />
       <span>About Us</span>
     </Link>
+      <Link
+        to="/aboutpage"
+        onClick={() => setMenu("about")}
+        className={`nav-item ${menu === "about" ? "active" : ""}`}
+      >
+        <Info size={18} />
+        <span>About Us</span>
+      </Link>
       <Link
         to="/contact"
         onClick={() => setMenu("contact-us")}
