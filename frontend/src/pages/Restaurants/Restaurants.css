@@ -41,6 +41,7 @@
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* fluid grid */
   gap: 20px;
   width: 100%;
+  margin-top: 40px;
 }
 
 .restaurant-card {
