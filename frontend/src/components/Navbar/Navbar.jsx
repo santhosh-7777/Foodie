@@ -126,14 +126,6 @@ const Navbar = ({ setShowLogin }) => {
       <span>About Us</span>
     </Link>
       <Link
-        to="/aboutpage"
-        onClick={() => setMenu("about")}
-        className={`nav-item ${menu === "about" ? "active" : ""}`}
-      >
-        <Info size={18} />
-        <span>About Us</span>
-      </Link>
-      <Link
         to="/contact"
         onClick={() => setMenu("contact-us")}
         className={`nav-item ${menu === "contact-us" ? "active" : ""}`}
