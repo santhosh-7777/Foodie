@@ -45,7 +45,7 @@ const Footer = () => {
                 <h2 className='text'>COMPANY</h2>
                 <ul>
                     <li><IoHome className='icon' /><Link to="/"><span>Home</span></Link></li>
-                    <li><SlSpeech className='icon' /><Link to="/aboutpage"><span>About Us</span></Link></li>
+                    <li><SlSpeech className='icon' /><Link to="/aboutus"><span>About Us</span></Link></li>
                     <li><CiDeliveryTruck className='icon' /><span>Delivery</span></li>
                     <li><MdPrivacyTip className='icon' /><span>Privacy Policy</span></li>
                     <li><BsQuestionCircle className='icon' /><Link to="/faq"><span>FAQ</span></Link></li> {/* ✅ Added FAQ */}
