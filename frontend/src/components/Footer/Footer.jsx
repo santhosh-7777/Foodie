@@ -9,6 +9,10 @@ import { MdAddCall } from "react-icons/md";
 import { IoIosMail } from "react-icons/io";
 import { BsQuestionCircle } from "react-icons/bs";  // ✅ FAQ icon
 import { Link } from "react-router-dom";
+import FacebookIcon from '../Icons/FacebookIcon';
+import TwitterIcon from '../Icons/TwitterIcon';
+import LinkedInIcon from '../Icons/LinkedInIcon';
+import GithubIcon from '../Icons/GithubIcon';
 
 const Footer = () => {
   return (
@@ -25,18 +29,10 @@ const Footer = () => {
                   Order fresh, tasty meals with just a few taps.
                 </p>
                 <div className="footer-social-icons">
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"> 
-                        <img src={assets.facebook_icon} alt="Facebook" />
-                    </a>
-                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-                        <img src={assets.twitter_icon} alt="Twitter" />
-                    </a>
-                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                        <img src={assets.linkedin_icon} alt="LinkedIn" />
-                    </a>
-                    <a href="https://github.com/Abhishek2634/Foodie" target="_blank" >
-                        <img src="/github(20).png" alt="Github" />
-                    </a>     
+                    <FacebookIcon />
+                    <TwitterIcon />
+                    <LinkedInIcon />
+                    <GithubIcon />  
                 </div>
             </div>
 
