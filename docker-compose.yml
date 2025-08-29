@@ -3,7 +3,7 @@ version: '3.8'
 services:
   # MongoDB Database
   mongodb:
-    image: mongo:6-alpine
+    image: mongo:7
     container_name: foodie-mongodb
     restart: unless-stopped
     ports:
