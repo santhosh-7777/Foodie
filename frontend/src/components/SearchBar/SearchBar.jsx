@@ -12,10 +12,22 @@ const SearchBar = ({
   className = "",
 }) => {
   const [query, setQuery] = useState("");
+  const [debounceQuery, setDebounceQuery] = useState("")
   const [isOpen, setIsOpen] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const searchRef = useRef(null);
   const inputRef = useRef(null);
+
+  // debouncing
+  useEffect(()=> {
+    const timer = setTimeout(()=> {
+      setDebounceQuery(query);
+      console.log("✅ Debounced value set:", query);
+    },400);                   // 400ms delay
+    return () => {
+      clearTimeout(timer)       // to avoid memory leak
+    }
+  },[query])
 
   // ✅ Voice search
   const handleVoiceSearch = () => {
@@ -85,16 +97,17 @@ const SearchBar = ({
     [popularSearches, defaultPopularSearches]
   );
 
+  // debounced search filter
   useEffect(() => {
-    if (query.trim()) {
+    if (debounceQuery.trim()) {
       const filtered = allSuggestions.filter((item) =>
-        item.toLowerCase().includes(query.toLowerCase())
+        item.toLowerCase().includes(debounceQuery.toLowerCase())
       );
       setFilteredSuggestions(filtered.slice(0, 8));
     } else {
       setFilteredSuggestions([]);
     }
-  }, [query, allSuggestions]);
+  }, [debounceQuery, allSuggestions]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -112,7 +125,7 @@ const SearchBar = ({
     setIsOpen(true);
   };
 
-  const handleSearch = (searchQuery = query) => {
+  const handleSearch = (searchQuery = debounceQuery) => {
     if (searchQuery.trim()) {
       onSearch && onSearch(searchQuery.trim());
       setIsOpen(false);
