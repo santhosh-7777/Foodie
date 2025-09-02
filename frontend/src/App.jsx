@@ -22,7 +22,6 @@ import LoadingAnimation from "./components/LoadingAnimation";
 import ScrollToTop from "../utility/ScrollToTop";
 import "./components/FoodDetail/print.css";
 import NotFound from "./pages/Notfound";
-import AboutPage from "./pages/AboutPage/AboutPage";
 import StoreContextProvider from "./components/context/StoreContext";
 import ScrollToBottom from "./components/ScrollToBottomButton/ScrollToBottomButton";
 import ReferralProgram from "./components/Referrals/ReferralProgram";
@@ -90,7 +89,6 @@ const App = () => {
             <Route path="/wishlist/:userId" element={<SharedWishlist />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/restaurants" element={<Restaurants />} />
-            <Route path="/aboutpage" element={<AboutPage />} />
             <Route path="/referral" element={<ReferralProgram />} />
             <Route path="/restaurant/:id" element={<RestaurantDetail />} />
             <Route path="/aboutus" element={<AboutUs />} />
