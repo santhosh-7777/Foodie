@@ -10,7 +10,7 @@ const Cart = () => {
   // Check if cart is empty
   const isCartEmpty = getTotalCartAmount() === 0;
 
-  
+
   if (isCartEmpty) {
     return (
       <div className="cart">
@@ -70,7 +70,7 @@ const Cart = () => {
           }}>
             Start your food journey by adding some delicious items!
           </p>
-          <button 
+          <button
             onClick={() => navigate('/')}
             style={{
               border: 'none',
@@ -114,9 +114,15 @@ const Cart = () => {
                   <Link to={`/food/${item._id}`}>{item.name}</Link>
                   <p>${item.price}</p>
                   <div className="cart-quantity-controls">
-                    <button onClick={() => removeFromCart(item._id)}>-</button>
+                    <button
+                      onClick={() => removeFromCart(item._id)}
+                      disabled={cartItems[item._id] <= 1}   // disable minus if quantity is going less than 1
+                    >-</button>
                     <span>{cartItems[item._id]}</span>
-                    <button onClick={() => addToCart(item._id)}>+</button>
+                    <button
+                      onClick={() => addToCart(item._id)}
+                      disabled={cartItems[item._id] >= 20}   // disable plus if quantity goes above 20
+                    >+</button>
                   </div>
                   <p>${item.price * cartItems[item._id]}</p>
                 </div>
@@ -142,9 +148,9 @@ const Cart = () => {
           <hr />
           <div className="cart-total-details">
             <b><p>Total</p></b>
-            <b><p>${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount()+2}</p></b>
+            <b><p>${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}</p></b>
           </div>
-          <button onClick={()=>navigate('/order')}>PROCEED TO CHECKOUT</button>
+          <button onClick={() => navigate('/order')}>PROCEED TO CHECKOUT</button>
         </div>
         <div className="cart-promo-code">
           <div>
