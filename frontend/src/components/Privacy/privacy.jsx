@@ -9,7 +9,7 @@ const Privacy = () => {
     <div className={`privacy-container ${theme === "dark" ? "dark" : "light"}`}>
       <div className="privacy-content">
         <h1 className="privacy-title">Privacy Policy</h1>
-        <p className="privacy-updated">Last updated: December 2024</p>
+        <p className="privacy-updated">Last updated: September 2025</p>
 
         <section className="privacy-section">
           <h2>Information We Collect</h2>
