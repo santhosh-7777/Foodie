@@ -98,6 +98,63 @@
     transform: scale(1.05);
 }
 
+/* Food Detail Cart Section */
+.food-detail-cart-section {
+    margin-top: 32px;
+}
+
+/* Quantity Controls for Food Detail */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f0f0f0;
+    width: fit-content;
+}
+
+.quantity-btn {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 99, 71, 0.3);
+}
+
+.quantity-btn:hover {
+    background-color: #e5533d;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(255, 99, 71, 0.4);
+}
+
+.quantity-btn:active {
+    transform: scale(0.95);
+}
+
+.quantity-display {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    min-width: 30px;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #e9ecef;
+}
+
 .food-item-footer {
     display: flex;
     justify-content: space-between;

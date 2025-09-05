@@ -13,7 +13,7 @@ const PrintableSection = React.forwardRef(({ children }, ref) => (
 ));
 
 const FoodDetail = () => {
-  const { addToCart, food_list } = useContext(StoreContext);
+  const { addToCart, removeFromCart, cartItems, food_list } = useContext(StoreContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -132,9 +132,23 @@ const FoodDetail = () => {
               </div>
             </div>
 
-            <button className="add-to-cart" onClick={() => addToCart(id)}>
-              <FaShoppingCart /> Add to Cart
-            </button>
+            <div className="food-detail-cart-section">
+              {!cartItems[id] ? (
+                <button className="add-to-cart" onClick={() => addToCart(id)}>
+                  <FaShoppingCart /> Add to Cart
+                </button>
+              ) : (
+                <div className="quantity-controls">
+                  <button className="quantity-btn" onClick={() => removeFromCart(id)}>
+                    -
+                  </button>
+                  <span className="quantity-display">{cartItems[id]}</span>
+                  <button className="quantity-btn" onClick={() => addToCart(id)}>
+                    +
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </PrintableSection>
