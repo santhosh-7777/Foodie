@@ -1,13 +1,13 @@
-## 🍽️ Foodie – Full-Stack Restaurant App
+# 🍽️ Foodie – Full-Stack Restaurant App
 
 A full-stack web application for browsing, listing, and managing a variety of food items. Built using React (Frontend), Express.js (Backend), and MongoDB.
 
-![Foodie Homepage](images/foodie-home-light.png)
+![screenshot of Foodie Homepage-lightmode](images/foodie-home-light.png)
 <sup>Homepage – Light Mode</sup>
 
 ---
 
-## 🚀 Quick Navigation 
+# 🚀 Quick Navigation 
 
 > **📚 New to Foodie? Complete Developer Guide**  
 > 👉 **[LEARN.md](./LEARN.md)** – Architecture, setup, contribution pathways, and everything you need to get started!
