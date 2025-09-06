@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import React, { useEffect, useContext, useRef, useCallback } from "react";
+import React, { useEffect, useContext, useRef, useCallback, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaDollarSign, FaListUl, FaStar, FaShoppingCart } from "react-icons/fa";
 import { StoreContext } from "../context/StoreContext";
@@ -7,6 +7,10 @@ import { useReactToPrint } from "react-to-print";
 import html2pdf from "html2pdf.js";
 import "./FoodDetail.css";
 import "./print.css";
+import { Dialog, DialogContent, DialogTitle, IconButton } from '@mui/material'
+import { FaSquareWhatsapp, FaSquareInstagram, FaSquareXTwitter, FaFacebook } from "react-icons/fa6";
+import { IoIosShareAlt } from "react-icons/io";
+import { SiGmail } from "react-icons/si";
 
 const PrintableSection = React.forwardRef(({ children }, ref) => (
   <div ref={ref}>{children}</div>
@@ -14,6 +18,7 @@ const PrintableSection = React.forwardRef(({ children }, ref) => (
 
 const FoodDetail = () => {
   const { addToCart, food_list } = useContext(StoreContext);
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -67,10 +72,93 @@ const FoodDetail = () => {
     return <div className="food-detail">No food item found.</div>;
   }
 
+  const options = [
+    {
+      icon: <FaSquareWhatsapp
+        color="green"
+        size={50}
+        cursor={'pointer'}
+        onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent(shareUrl)}`)}
+      />,
+      text: "WhatsApp"
+    },
+    {
+      icon: <FaFacebook
+        color="blue"
+        size={50}
+        cursor={'pointer'}
+        onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+          shareUrl
+        )}`, "_blank")}
+      />,
+      text: "Instagram"
+    },
+    {
+      icon: <FaSquareXTwitter
+        size={50}
+        cursor={'pointer'}
+        color="black"
+        onClick={() => window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+          shareUrl
+        )}`)}
+      />,
+      text: "Twitter"
+    },
+    {
+      icon: <SiGmail
+        size={50}
+        cursor={'pointer'}
+        color="red"
+        onClick={() => window.open(`mailto:?subject=${encodeURIComponent(
+          "Check out this food on Foodie!"
+        )}&body=${encodeURIComponent(
+          `I found this food item, thought you might like it: ${shareUrl}`
+        )}`)}
+      />,
+      text: "Mail"
+    }
+  ]
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const shareUrl = window.location.href; // generate url of current page
+
   return (
     <div className="food-detail-wrapper">
       {/* Action Buttons */}
       <div className="no-print" style={{ marginBottom: "1rem", textAlign: "right" }}>
+        <button
+          onClick={handleOpen}
+          style={{
+            marginRight: "0.5rem",
+            padding: "0.5rem 1rem",
+            cursor: "pointer",
+            border: "none",
+            borderRadius: "5px",
+            background: "#ff0000",
+            color: "#fff",
+            fontWeight: "bold"
+          }}
+        >
+          <IoIosShareAlt size={13} /> Share
+        </button>
+        <Dialog open={open} onClose={handleClose}>
+          <DialogTitle align="center">Share this Food</DialogTitle>
+          <DialogContent>
+            <div style={{ display: "flex", alignItems: "center", gap: "1vmax" }}>
+              {
+                options.map((item, index) => {
+                  return (
+                    <div key={index} style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                      <IconButton>{item.icon}</IconButton>
+                      {item.text}
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </DialogContent>
+        </Dialog>
         <button
           onClick={handlePrint}
           style={{
