@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import React, { useEffect, useContext, useRef, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import { FaDollarSign, FaListUl, FaStar, FaShoppingCart } from "react-icons/fa";
@@ -6,7 +7,7 @@ import { useReactToPrint } from "react-to-print";
 import html2pdf from "html2pdf.js";
 import FoodItem from "../FoodItem/FoodItem";
 import "./FoodDetail.css";
-import "./print.css"; 
+import "./print.css";
 
 const PrintableSection = React.forwardRef(({ children }, ref) => (
   <div ref={ref}>{children}</div>
@@ -75,37 +76,37 @@ const FoodDetail = () => {
   return (
     <div className="food-detail-wrapper">
       {/* Action Buttons */}
-        <div className="no-print" style={{ marginBottom: "1rem", textAlign: "right" }}>
-  <button
-    onClick={handlePrint}
-    style={{
-      marginRight: "0.5rem",
-      padding: "0.5rem 1rem",
-      cursor: "pointer",
-      border: "none",
-      borderRadius: "5px",
-      background: "#ff0000",
-      color: "#fff",
-      fontWeight: "bold"
-    }}
-  >
-    🖨️ Print
-  </button>
-  <button
-    onClick={handleExportPdf}
-    style={{
-      padding: "0.5rem 1rem",
-      cursor: "pointer",
-      border: "none",
-      borderRadius: "5px",
-      background: "#ff0000",
-      color: "#fff",
-      fontWeight: "bold"
-    }}
-  >
-    ⬇️ Export PDF
-  </button>
-</div>
+      <div className="no-print" style={{ marginBottom: "1rem", textAlign: "right" }}>
+        <button
+          onClick={handlePrint}
+          style={{
+            marginRight: "0.5rem",
+            padding: "0.5rem 1rem",
+            cursor: "pointer",
+            border: "none",
+            borderRadius: "5px",
+            background: "#ff0000",
+            color: "#fff",
+            fontWeight: "bold"
+          }}
+        >
+          🖨️ Print
+        </button>
+        <button
+          onClick={handleExportPdf}
+          style={{
+            padding: "0.5rem 1rem",
+            cursor: "pointer",
+            border: "none",
+            borderRadius: "5px",
+            background: "#ff0000",
+            color: "#fff",
+            fontWeight: "bold"
+          }}
+        >
+          ⬇️ Export PDF
+        </button>
+      </div>
 
 
 
@@ -131,7 +132,6 @@ const FoodDetail = () => {
                 <FaStar className="star-icon" /> 4.5 (120+ reviews)
               </div>
             </div>
-
             <div className="food-detail-cart-section">
               {!cartItems[id] ? (
                 <button className="add-to-cart" onClick={() => addToCart(id)}>
