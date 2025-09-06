@@ -27,7 +27,7 @@ import ScrollToBottom from "./components/ScrollToBottomButton/ScrollToBottomButt
 import ReferralProgram from "./components/Referrals/ReferralProgram";
 import AboutUs from "./components/Aboutus/Aboutus";
 import FAQ from "./components/FAQ/FAQ";
-import VoiceSearchButton from "./components/VoiceSearchButton/VoiceSearchButton";
+import Privacy from "./components/Privacy/privacy";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -93,12 +93,12 @@ const App = () => {
             <Route path="/referral" element={<ReferralProgram />} />
             <Route path="/restaurant/:id" element={<RestaurantDetail />} />
             <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/privacy" element={<Privacy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
 
           <ScrollToTopButton /> {/* floating button */}
           <CartSummaryBar />
-          <VoiceSearchButton />
           <AppDownload />
           
           {/* ✅ Footer now contains FAQ */}

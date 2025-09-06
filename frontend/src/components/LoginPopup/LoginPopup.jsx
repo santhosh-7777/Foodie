@@ -127,10 +127,15 @@ const LoginPopup = ({ setShowLogin }) => {
     const name = formData.get("name");
     const email = formData.get("email");
     const password = formData.get("password");
+    const confirmPassword = formData.get("confirmPassword");
 
     if (!email || !password || (currState === "Sign Up" && !name)) {
         return toast.error("Please fill all fields");
       }
+
+    if (currState === "Sign Up" && password !== confirmPassword) {
+      return toast.error("Passwords do not match");
+    }
 
     const endpoint =
       currState === "Sign Up" ? "/api/auth/register" : "/api/auth/login";
@@ -180,6 +185,14 @@ const LoginPopup = ({ setShowLogin }) => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   onFocus={() => setShowPasswordChecker(true)}
+                  required
+                />
+              )}
+              {currState === "Sign Up" && (
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="Confirm Password"
                   required
                 />
               )}
