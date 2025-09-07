@@ -27,7 +27,6 @@ import ScrollToBottom from "./components/ScrollToBottomButton/ScrollToBottomButt
 import ReferralProgram from "./components/Referrals/ReferralProgram";
 import AboutUs from "./components/Aboutus/Aboutus";
 import FAQ from "./components/FAQ/FAQ";
-import VoiceSearchButton from "./components/VoiceSearchButton/VoiceSearchButton";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -98,7 +97,6 @@ const App = () => {
 
           <ScrollToTopButton /> {/* floating button */}
           <CartSummaryBar />
-          <VoiceSearchButton />
           <AppDownload />
           
           {/* ✅ Footer now contains FAQ */}
