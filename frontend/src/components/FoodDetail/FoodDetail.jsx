@@ -276,8 +276,10 @@ const FoodDetail = () => {
         </div>
       </PrintableSection>
       <hr />
-      <h2>Reviews and Ratings</h2>
-      <div className="reviewcards">
+      {
+        review.length > 0 &&  <h2>Reviews and Ratings</h2>
+      }
+      <div className="reviewcards">        
         {
           review.map((p) => {
             return (
