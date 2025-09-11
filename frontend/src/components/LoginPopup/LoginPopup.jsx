@@ -310,9 +310,9 @@ const LoginPopup = ({ setShowLogin }) => {
 
         {!forgotFlow && (
           currState === "Login" ? (
-            <p>Create a new account? <span onClick={() => setCurrState("Sign Up")}>Click Here</span></p>
+            <p style={{color: '#ddd'}}>Create a new account? <span onClick={() => setCurrState("Sign Up")}>Click Here</span></p>
           ) : (
-            <p>Already have an account? <span onClick={() => setCurrState("Login")}>Login Here</span></p>
+            <p style={{color: '#ddd'}}>Already have an account? <span onClick={() => setCurrState("Login")}>Login Here</span></p>
           )
         )}
       </form>

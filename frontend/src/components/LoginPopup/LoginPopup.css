@@ -184,6 +184,10 @@
   color: #ddd;
 }
 
+.login-popup-condition p {
+  color: #ddd;
+}
+
 /* ===== Switch Text (Login <-> Signup) ===== */
 .LoginPopup p span {
   color: #ff8567;
