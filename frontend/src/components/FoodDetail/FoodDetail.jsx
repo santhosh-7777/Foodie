@@ -12,6 +12,7 @@ import { FaSquareWhatsapp, FaSquareXTwitter, FaFacebook } from "react-icons/fa6"
 import { IoIosShareAlt } from "react-icons/io";
 import { SiGmail } from "react-icons/si";
 import { MdOutlineRateReview } from "react-icons/md";
+import OrderTogether from "./OrderTogether";
 
 const PrintableSection = React.forwardRef(({ children }, ref) => (
   <div ref={ref}>{children}</div>
@@ -304,6 +305,7 @@ const FoodDetail = () => {
           })
         }
       </div>
+      <OrderTogether/>
     </div>
   );
 };
