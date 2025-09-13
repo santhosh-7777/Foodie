@@ -1,5 +1,5 @@
 import "./Cart.css";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { StoreContext } from "../../components/context/StoreContext";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -10,6 +10,17 @@ const Cart = () => {
   // Check if cart is empty
   const isCartEmpty = getTotalCartAmount() === 0;
 
+  const [promo,setPromo]=useState();
+  const [err,setErr] = useState();
+
+  const handlebtn=()=>{
+
+    if (!promo) {
+      setErr("Please enter a promo code");
+    } else {
+      setErr("");
+    }
+  };
 
   if (isCartEmpty) {
     return (
@@ -116,7 +127,6 @@ const Cart = () => {
                   <div className="cart-quantity-controls">
                     <button
                       onClick={() => removeFromCart(item._id)}
-                      disabled={cartItems[item._id] <= 1}   // disable minus if quantity is going less than 1
                     >-</button>
                     <span>{cartItems[item._id]}</span>
                     <button
@@ -156,9 +166,10 @@ const Cart = () => {
           <div>
             <p>If you have a promo code, Enter it here</p>
             <div className="cart-promocode-input">
-              <input placeholder="Promo Code" type="text" />
-              <button>Submit</button>
+              <input placeholder="Promo Code" type="text" id="promo" onChange={(e)=>(setPromo(e.target.value))} />
+              <button onClick={()=>handlebtn()}>Submit</button>
             </div>
+            {err && <p id="promo-err" style={{color:'red'}}>{err}</p>}
           </div>
         </div>
       </div>

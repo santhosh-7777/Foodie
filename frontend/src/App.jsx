@@ -29,6 +29,7 @@ import AboutUs from "./components/Aboutus/Aboutus";
 import FAQ from "./components/FAQ/FAQ";
 import MyProfile from "./pages/MyProfile/MyProfile";
 import MyOrder from "./pages/MyOrder/MyOrder";
+import Privacy from "./components/Privacy/privacy";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -138,6 +139,7 @@ const App = () => {
                   </div>
                 )
               } />
+            <Route path="/privacy" element={<Privacy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
 
