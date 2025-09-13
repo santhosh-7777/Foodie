@@ -98,6 +98,11 @@
     background-color: rgb(239, 17, 17);
     transform: scale(1.05);
 }
+.two-button-in-same-frame{
+    display: flex;
+    align-items: center;
+    gap:0.5vmax;
+}
 
 /* Food Detail Cart Section */
 .food-detail-cart-section {
@@ -155,7 +160,6 @@
     border-radius: 20px;
     border: 1px solid #e9ecef;
 }
-
 .food-item-footer {
     display: flex;
     justify-content: space-between;

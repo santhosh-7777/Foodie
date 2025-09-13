@@ -1,5 +1,4 @@
 import "./Cart.css";
-import AddressSection from "../../components/AddressSection/AddressSection";
 import React, { useContext, useState } from "react";
 import { StoreContext } from "../../components/context/StoreContext";
 import { useNavigate, Link } from "react-router-dom";
@@ -12,6 +11,17 @@ const Cart = () => {
   // Check if cart is empty
   const isCartEmpty = getTotalCartAmount() === 0;
 
+  const [promo,setPromo]=useState();
+  const [err,setErr] = useState();
+
+  const handlebtn=()=>{
+
+    if (!promo) {
+      setErr("Please enter a promo code");
+    } else {
+      setErr("");
+    }
+  };
 
   if (isCartEmpty) {
     return (
@@ -158,9 +168,10 @@ const Cart = () => {
           <div>
             <p>If you have a promo code, Enter it here</p>
             <div className="cart-promocode-input">
-              <input placeholder="Promo Code" type="text" />
-              <button>Submit</button>
+              <input placeholder="Promo Code" type="text" id="promo" onChange={(e)=>(setPromo(e.target.value))} />
+              <button onClick={()=>handlebtn()}>Submit</button>
             </div>
+            {err && <p id="promo-err" style={{color:'red'}}>{err}</p>}
           </div>
 
           {checkoutBtnClicked && (<AddressSection />)

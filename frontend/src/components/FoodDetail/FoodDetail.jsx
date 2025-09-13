@@ -238,7 +238,8 @@ const FoodDetail = () => {
                 <FaStar className="star-icon" /> 4.5 (120+ reviews)
               </div>
             </div>
-           <div className="food-detail-cart-section">
+            <div className="two-button-in-same-frame">
+             <div className="food-detail-cart-section">
               {!cartItems[id] ? (
                 <button className="add-to-cart" onClick={() => addToCart(id)}>
                   <FaShoppingCart /> Add to Cart
@@ -255,9 +256,10 @@ const FoodDetail = () => {
                 </div>
               )}
             </div>
-            <button className="add-to-cart" onClick={handleOpenModal}>
-              <MdOutlineRateReview /> Submit Review
-            </button>
+              <button className="add-to-cart" onClick={handleOpenModal}>
+                <MdOutlineRateReview /> Submit Review
+              </button>
+            </div>
             <Dialog open={openReviewModal} onClose={handleCloseModal}>
               <DialogTitle textAlign={"center"}>Submit You Review</DialogTitle>
               <DialogContent>
@@ -296,9 +298,9 @@ const FoodDetail = () => {
       </PrintableSection>
       <hr />
       {
-        review.length > 0 &&  <h2>Reviews and Ratings</h2>
+        review.length > 0 && <h2>Reviews and Ratings</h2>
       }
-      <div className="reviewcards">        
+      <div className="reviewcards">
         {
           review.map((p) => {
             return (
