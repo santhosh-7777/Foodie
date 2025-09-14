@@ -86,6 +86,7 @@ const App = () => {
                 )
               }
             />
+            <Route path="/faq" element={<FAQ />} />
             <Route path="/food/:id" element={<FoodDetail />} />
             <Route path="/wishlist" element={<Wishlist />} />
             <Route path="/wishlist/:userId" element={<SharedWishlist />} />
@@ -104,9 +105,9 @@ const App = () => {
           <FeedbackReviews />
           
           {/* ✅ Footer now contains FAQ */}
-          <Footer>
-            <FAQ />
-          </Footer>
+          <Footer />
+            {/* <FAQ /> */}
+          {/* </Footer> */}
 
           <Chatbot /> {/* AI Food Assistant */}
         </div>
