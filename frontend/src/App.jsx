@@ -28,6 +28,7 @@ import ReferralProgram from "./components/Referrals/ReferralProgram";
 import AboutUs from "./components/Aboutus/Aboutus";
 import FAQ from "./components/FAQ/FAQ";
 import Privacy from "./components/Privacy/privacy";
+import FeedbackReviews from "./components/FeedbackReviews/FeedbackReviews";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -100,6 +101,7 @@ const App = () => {
           <ScrollToTopButton /> {/* floating button */}
           <CartSummaryBar />
           <AppDownload />
+          <FeedbackReviews />
           
           {/* ✅ Footer now contains FAQ */}
           <Footer>
