@@ -84,6 +84,10 @@
   transition: background 0.3s, border 0.3s;
 }
 
+
+#about-description{
+  margin-left: 2rem;
+}
 .about-container.light .section {
   background: #ffffff;
   border: 1px solid #ddd;
