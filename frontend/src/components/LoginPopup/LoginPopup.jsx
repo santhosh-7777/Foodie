@@ -1,3 +1,4 @@
+// LoginPopup.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import './LoginPopup.css';
 import { assets } from '../../assets/frontend_assets/assets';
@@ -6,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import apiRequest from "../../lib/apiRequest";
 
 
-const LoginPopup = ({ setShowLogin }) => {
+const LoginPopup = ({ setShowLogin, setIsLoggedIn }) => {
   const [currState, setCurrState] = useState("Sign Up");
   const [forgotFlow, setForgotFlow] = useState(false);
   const [stage, setStage] = useState(1);
@@ -15,7 +16,7 @@ const LoginPopup = ({ setShowLogin }) => {
   const [timer, setTimer] = useState(60);
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   const [password, setPassword] = useState('');
   const [passwordStrength, setPasswordStrength] = useState({
@@ -153,6 +154,7 @@ const LoginPopup = ({ setShowLogin }) => {
       setOtp(Array(6).fill(""));
       setCurrState("Login");
     };
+
     const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -164,7 +166,7 @@ const LoginPopup = ({ setShowLogin }) => {
 
     if (!email || !password || (currState === "Sign Up" && !name)) {
         return toast.error("Please fill all fields");
-      }
+    }
 
     if (currState === "Sign Up" && password !== confirmPassword) {
       return toast.error("Passwords do not match");
@@ -174,24 +176,35 @@ const LoginPopup = ({ setShowLogin }) => {
       currState === "Sign Up" ? "/api/auth/register" : "/api/auth/login";
 
     try {
-        const { data } = await apiRequest.post(endpoint, { name, email, password });
+        const response = await apiRequest.post(endpoint, { name, email, password });
+        const data = response.data;
+        
+        if (data.success) {
+            toast.success(data.message);
+            // Store user info in localStorage (token is handled by HTTP-only cookie)
+            localStorage.setItem("user", JSON.stringify(data.user));
+            localStorage.setItem("authToken", "authenticated"); // Set auth flag for App.jsx
+            
+            // Update authentication state in parent component
+            if (setIsLoggedIn) {
+                setIsLoggedIn(true);
+            }
+            
+            setShowLogin(false);
+            
+            // Navigate to home page
+            navigate("/");
+            window.location.reload();
 
-      toast.success(`${currState} successful!`);
-
-      // Store user info locally (no token)
-      localStorage.setItem("user", JSON.stringify(data.user));
-
-      setShowLogin(false);
-      window.location.reload();
+        } else {
+            toast.error(data.message || `${currState} failed. Please try again.`);
+        }
     } catch (err) {
-      const message =
-        err.response?.data?.message || `${currState} failed. Please try again.`;
+      const message = err.response?.data?.message || `${currState} failed. Please try again.`;
       toast.error(message);
       console.error(err);
     }
   };
-
-
 
   return (
     <div className='LoginPopup'>

@@ -42,6 +42,16 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Listen for storage changes to update auth state
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setIsLoggedIn(!!localStorage.getItem("authToken"));
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
+  }, []);
+
   if (loading) {
     return <LoadingAnimation />;
   }
@@ -51,10 +61,10 @@ const App = () => {
       <StoreContextProvider>
         {/* ✅ Wrap the app with StoreContextProvider */}
         <Toaster position="top-right" reverseOrder={false} />
-        {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
+        {showLogin && <LoginPopup setShowLogin={setShowLogin} setIsLoggedIn={setIsLoggedIn} />}
 
         <div className="app">
-          <Navbar setShowLogin={setShowLogin} />
+          <Navbar setShowLogin={setShowLogin} setIsLoggedIn={setIsLoggedIn} />
           <ScrollToTop />
           <ScrollToBottom />
 
