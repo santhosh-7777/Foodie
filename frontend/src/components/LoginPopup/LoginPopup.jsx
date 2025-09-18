@@ -230,7 +230,7 @@ const LoginPopup = ({ setShowLogin, setIsLoggedIn }) => {
                     className="password-toggle-btn"
                     onClick={() => setShowPassword(!showPassword)}
                   >
-                    {showPassword ? <EyeOffIcon color="white"size={20} /> : <EyeIcon color="white" size={20} />}
+                    {showPassword ? <EyeOffIcon size={20} color='white'/> : <EyeIcon size={20} color='white'/>}
                   </span>
                 </div>
               )}
@@ -257,7 +257,7 @@ const LoginPopup = ({ setShowLogin, setIsLoggedIn }) => {
                     className="password-toggle-btn"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                   >
-                    {showConfirmPassword ? <EyeOffIcon size={20} color='white' /> : <EyeIcon size={20} color='white' />}
+                    {showConfirmPassword ? <EyeOffIcon size={20} color='white'/> : <EyeIcon size={20} color='white' />}
                   </span>
                 </div>
               )}
@@ -312,7 +312,7 @@ const LoginPopup = ({ setShowLogin, setIsLoggedIn }) => {
                     className="password-toggle-btn"
                     onClick={() => setShowLoginPassword(!showLoginPassword)}
                   >
-                    {showLoginPassword ? <EyeOffIcon size={20} /> : <EyeIcon  size={20} />}
+                    {showLoginPassword ? <EyeOffIcon size={20} /> : <EyeIcon size={20} />}
                   </span>
                 </div>
               )}
