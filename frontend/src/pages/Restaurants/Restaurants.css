@@ -52,7 +52,7 @@
   max-width: 100%; /* remove 400px restriction */
   border-radius: 15px;
   box-shadow: 0px 0px 10px #00000015;
-  transition: box-shadow 0.4s cubic-bezier(.4,0,.2,1), background-color 0.3s, color 0.3s;
+  transition: box-shadow 0.4s cubic-bezier(.4,0,.2,1), background-color 0.3s, color 0.3s , all 0.4s ease-in-out;
   animation: FadeIn 0.8s ease;
   background-color: var(--bg-color, #fff);
   color: var(--text-color, #111);
@@ -62,7 +62,7 @@
 }
 
 .restaurant-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   transform: translateY(-5px);
   background-color: #fff;
 }
