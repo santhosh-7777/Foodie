@@ -162,9 +162,14 @@ const LoginPopup = ({ setShowLogin, setIsLoggedIn }) => {
 
       if (data.success) {
         toast.success(data.message);
-        // Store user info in localStorage (token is handled by HTTP-only cookie)
+
+        // Store user info and auth token locally
         localStorage.setItem("user", JSON.stringify(data.user));
-        localStorage.setItem("authToken", "authenticated"); // Set auth flag for App.jsx
+        if (data.token) {
+          localStorage.setItem("authToken", data.token);
+        } else {
+          localStorage.setItem("authToken", "authenticated"); // fallback
+        }
 
         // Update authentication state in parent component
         if (setIsLoggedIn) {
@@ -176,7 +181,6 @@ const LoginPopup = ({ setShowLogin, setIsLoggedIn }) => {
         // Navigate to home page
         navigate("/");
         window.location.reload();
-
       } else {
         toast.error(data.message || `${currState} failed. Please try again.`);
       }
@@ -226,7 +230,7 @@ const LoginPopup = ({ setShowLogin, setIsLoggedIn }) => {
                     className="password-toggle-btn"
                     onClick={() => setShowPassword(!showPassword)}
                   >
-                    {showPassword ? <EyeOffIcon size={20} /> : <EyeIcon size={20} />}
+                    {showPassword ? <EyeOffIcon color="white"size={20} /> : <EyeIcon color="white" size={20} />}
                   </span>
                 </div>
               )}
@@ -253,7 +257,7 @@ const LoginPopup = ({ setShowLogin, setIsLoggedIn }) => {
                     className="password-toggle-btn"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                   >
-                    {showConfirmPassword ? <EyeOffIcon size={20} /> : <EyeIcon size={20} />}
+                    {showConfirmPassword ? <EyeOffIcon size={20} color='white' /> : <EyeIcon size={20} color='white' />}
                   </span>
                 </div>
               )}
@@ -308,7 +312,7 @@ const LoginPopup = ({ setShowLogin, setIsLoggedIn }) => {
                     className="password-toggle-btn"
                     onClick={() => setShowLoginPassword(!showLoginPassword)}
                   >
-                    {showLoginPassword ? <EyeOffIcon size={20} /> : <EyeIcon size={20} />}
+                    {showLoginPassword ? <EyeOffIcon size={20} /> : <EyeIcon  size={20} />}
                   </span>
                 </div>
               )}
