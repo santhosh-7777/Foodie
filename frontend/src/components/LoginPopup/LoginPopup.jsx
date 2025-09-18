@@ -4,6 +4,7 @@ import { assets } from '../../assets/frontend_assets/assets';
 import toast, { Toaster } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import apiRequest from "../../lib/apiRequest";
+import { EyeIcon,EyeOffIcon } from "lucide-react";
 
 
 const LoginPopup = ({ setShowLogin }) => {
@@ -15,6 +16,9 @@ const LoginPopup = ({ setShowLogin }) => {
   const [timer, setTimer] = useState(60);
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [showPassword,setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [showLoginPassword, setShowLoginPassword] = useState(false);
   const navigate=useNavigate();
 
   const [password, setPassword] = useState('');
@@ -195,41 +199,59 @@ const LoginPopup = ({ setShowLogin }) => {
             <>
               <input type="email" name="email" placeholder="Your Email" required />
               {currState === "Sign Up" && (
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Your Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  onFocus={() => {
-                    setPasswordFocused(true);
-                    setShowPasswordChecker(true);
-                  }}
-                  onBlur={() => {
-                    setPasswordFocused(false);
-                    if (!confirmFocused) setShowPasswordChecker(false);
-                  }}
-                  required
-                />
+                <div className="password-input-container">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    name="password"
+                    placeholder="Your Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    onFocus={() => {
+                      setPasswordFocused(true);
+                      setShowPasswordChecker(true);
+                    }}
+                    onBlur={() => {
+                      setPasswordFocused(false);
+                      if (!confirmFocused) setShowPasswordChecker(false);
+                    }}
+                    required
+                  />
+                  <span
+                    className="password-toggle-btn"
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    {showPassword ? <EyeOffIcon size={20} /> : <EyeIcon size={20} />}
+                  </span>
+                </div>
               )}
-              {/*{currState === "Sign Up" && (*/}
-                <input
-                  type="password"
-                  name="confirmPassword"
-                  placeholder="Confirm Password"
-                  value={signUpConfirmPassword}
-                  onChange={(e) => setSignUpConfirmPassword(e.target.value)}
-                  onFocus={() => {
-                    setConfirmFocused(true);
-                    setShowPasswordChecker(true);
-                  }}
-                  onBlur={() => {
-                    setConfirmFocused(false);
-                    if (!passwordFocused) setShowPasswordChecker(false);
-                  }}
-                  required
-                />
-              {/*})}*/}
+              
+              {currState === "Sign Up" && (
+                <div className="password-input-container">
+                  <input
+                    type={showConfirmPassword ? "text" : "password"}
+                    name="confirmPassword"
+                    placeholder="Confirm Password"
+                    value={signUpConfirmPassword}
+                    onChange={(e) => setSignUpConfirmPassword(e.target.value)}
+                    onFocus={() => {
+                      setConfirmFocused(true);
+                      setShowPasswordChecker(true);
+                    }}
+                    onBlur={() => {
+                      setConfirmFocused(false);
+                      if (!passwordFocused) setShowPasswordChecker(false);
+                    }}
+                    required
+                  />
+                  <span
+                    className="password-toggle-btn"
+                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                  >
+                    {showConfirmPassword ? <EyeOffIcon size={20} /> : <EyeIcon size={20} />}
+                  </span>
+                </div>
+              )}
+              
               {currState === "Sign Up" && showPasswordChecker && (
                 <div className="password-checker-box">
                   {passwordFocused && (
@@ -269,13 +291,22 @@ const LoginPopup = ({ setShowLogin }) => {
               )}
 
               {currState === "Login" && (
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Your Password"
-                  required
-                />
+                <div className="password-input-container">
+                  <input
+                    type={showLoginPassword ? "text" : "password"}
+                    name="password"
+                    placeholder="Your Password"
+                    required
+                  />
+                  <span
+                    className="password-toggle-btn"
+                    onClick={() => setShowLoginPassword(!showLoginPassword)}
+                  >
+                    {showLoginPassword ? <EyeOffIcon size={20} /> : <EyeIcon size={20} />}
+                  </span>
+                </div>
               )}
+              
               <button type="submit">{currState === 'Sign Up' ? "Create Account" : "Login"}</button>
               {currState === "Login" && (
                 <p className="forgot-password-link" onClick={() => {

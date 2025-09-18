@@ -218,3 +218,30 @@
     transform: scale(1);
   }
 }
+/* ===== Password Input Container ===== */
+.password-input-container {
+  width: 100%;
+  position: relative;
+}
+
+.password-input-container input {
+   width: 100%;
+  padding-right: 45px !important;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle-btn svg {
+  width: 18px;
+  height: 18px;
+}
