@@ -91,6 +91,10 @@
   flex-direction: column;
 }
 
+
+#about-description{
+  margin-left: 2rem;
+}
 .about-container.light .section {
   background: #ffffff;
   border: 1px solid #ddd;
