@@ -30,6 +30,7 @@ import FAQ from "./components/FAQ/FAQ";
 import Privacy from "./components/Privacy/privacy";
 import TermsOfService from "./components/TermsOfService/TermsOfService";
 import FeedbackReviews from "./components/FeedbackReviews/FeedbackReviews";
+import Delivery from "./pages/Delivery/Delivery";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -109,6 +110,7 @@ const App = () => {
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<TermsOfService />} />
+            <Route path="/delivery" element={<Delivery />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
 
