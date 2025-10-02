@@ -408,7 +408,18 @@ We welcome contributions to the Foodie project! If you find this project helpful
 This project is licensed under the MIT License.
 
 ---
+## Contact 📝
 
+If you have any questions, feedback, or want to collaborate, feel free to reach out to the project maintainer:
+
+**Maintainer:** Abhishek Farshwal
+**GitHub:** [Foodie](https://github.com/Abhishek2634)  
+
+- [LinkedIn](https://www.linkedin.com/in/abhishekfarswal/?originalSubdomain=in)  
+- [Twitter](https://x.com/Abhishek899620)  
+- [Instagram](https://www.instagram.com/abhishekfarswal/)
+
+----
 ## 🔗 References
 
 * [React](https://reactjs.org/)
