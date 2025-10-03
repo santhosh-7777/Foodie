@@ -419,7 +419,7 @@ If you have any questions, feedback, or want to collaborate, feel free to reach 
 - [Twitter](https://x.com/Abhishek899620)  
 - [Instagram](https://www.instagram.com/abhishekfarswal/)
 
-----
+---
 ## 🔗 References
 
 * [React](https://reactjs.org/)
