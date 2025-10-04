@@ -107,7 +107,6 @@ A full-stack web application for browsing, listing, and managing a variety of fo
 
 * **Docker** – Containerization for all services
 * **Docker Compose** – Multi-service orchestration
-
 ---
 
 ## 🚀 Getting Started
@@ -160,7 +159,6 @@ docker-compose up --build
 * **foodie-mongodb**: MongoDB database (Port 27017)
 
 ---
-
 #### 📦 Manual Installation
 
 ```bash
@@ -173,7 +171,6 @@ cd frontend && npm install && cd ..
 cd backend && npm install && cd ..
 cd admin && npm install && cd ..
 ```
-
 ---
 
 ### 🔧 Development Setup
@@ -224,7 +221,6 @@ Server runs on `http://localhost:4000`
 # Make sure MongoDB is running locally
 mongod
 ```
-
 ---
 
 ## 📁 Project Structure
@@ -254,7 +250,6 @@ Foodie/
 ├── README.md
 └── CONTRIBUTING.md
 ```
-
 ---
 
 ## 🐳 Docker Commands
@@ -309,7 +304,6 @@ docker-compose exec mongodb mongodump --out /backup
 # View MongoDB logs
 docker-compose logs mongodb
 ```
-
 ---
 
 ## 🧪 Linting
@@ -323,7 +317,6 @@ cd frontend && npm run lint
 # Admin linting
 cd admin && npm run lint
 ```
-
 ---
 
 ## 🧰 Scripts
@@ -394,7 +387,6 @@ We welcome contributions to the Foodie project! If you find this project helpful
 * 🚀 For more info go to [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### Development Workflow
-
 1. Fork the repository
 2. Create a feature branch
 3. Use Docker for consistent development environment
@@ -404,12 +396,10 @@ We welcome contributions to the Foodie project! If you find this project helpful
 ---
 
 ## 📄 License
-
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](./LICENSE)
 
 ---
 ## Contact 📝
-
 If you have any questions, feedback, or want to collaborate, feel free to reach out to the project maintainer:
 
 **Maintainer:** Abhishek Farshwal
@@ -421,7 +411,6 @@ If you have any questions, feedback, or want to collaborate, feel free to reach 
 
 ---
 ## 🔗 References
-
 * [React](https://reactjs.org/)
 * [Vite](https://vitejs.dev/)
 * [Express](https://expressjs.com/)
