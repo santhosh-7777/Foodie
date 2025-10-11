@@ -6,6 +6,7 @@ A full-stack web application for browsing, listing, and managing a variety of fo
 <sup>Homepage – Light Mode</sup>
 
 ---
+
 ## 🌟GSSoc 
 
 ![GSSoC Logo](https://github.com/dimpal-yadav/Foodie/blob/main/images/GSSoC.png)
