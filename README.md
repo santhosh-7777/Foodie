@@ -6,7 +6,6 @@ A full-stack web application for browsing, listing, and managing a variety of fo
 <sup>Homepage – Light Mode</sup>
 
 ---
-
 ## 🌟GSSoc 
 
 ![GSSoC Logo](https://github.com/dimpal-yadav/Foodie/blob/main/images/GSSoC.png)
@@ -28,7 +27,7 @@ GSSoC is one of India’s **largest 3-month-long open-source programs** that enc
 
 ---
 
-# 🚀 Quick Navigation 
+# 🚀 Quick Navigation
 
 > **📚 New to Foodie? Complete Developer Guide**  
 > 👉 **[LEARN.md](./LEARN.md)** – Architecture, setup, contribution pathways, and everything you need to get started!
