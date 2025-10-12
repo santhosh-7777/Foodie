@@ -1,17 +1,20 @@
-# 🍽️ Foodie – Full-Stack Restaurant Appp
+# 🍽️ Foodie – Full-Stack Restaurant App
 
 A full-stack web application for browsing, listing, and managing a variety of food items. Built using React (Frontend), Express.js (Backend), and MongoDB.
 
 ![screenshot of Foodie Homepage-lightmode](images/foodie-home-light.png)
 <sup>Homepage – Light Mode</sup>
 ---
+
 ## 🌟GSSoc 
+
 ![GSSoC Logo](https://github.com/dimpal-yadav/Foodie/blob/main/images/GSSoC.png)
+
 🌟 **Exciting News...**
 
-🚀 This project is now an official part of GirlScript Summer of Code – GSSoC'25! 💃🎉💻 We're thrilled to welcome contributors from all over India and beyond to collaborate, build, and grow *Foodie!* Let’s make learning and career development smarter – together! 🌟👨‍💻👩‍💻
+🚀 This project is now an official part of GirlScript Summer of Code – GSSoC'25! 💻 We're thrilled to welcome contributors from all over India and beyond to collaborate, build, and grow *Foodie!* Let’s make learning and career development smarter – together! 🌟
 
-👩‍💻 GSSoC is one of India’s **largest 3-month-long open-source programs** that encourages developers of all levels to contribute to real-world projects 🌍 while learning, collaborating, and growing together. 🌱
+GSSoC is one of India’s **largest 3-month-long open-source programs** that encourages developers of all levels to contribute to real-world projects while learning, collaborating, and growing together.
 
 🌈 With **mentorship, community support**, and **collaborative coding**, it's the perfect platform for developers to:
 
@@ -20,34 +23,11 @@ A full-stack web application for browsing, listing, and managing a variety of fo
 - 🏆 Get recognized for their work
 - 📜 Receive certificates and swag!
 
-🎉 **I can’t wait to welcome new contributors** from GSSoC 2025 to this Foodie project family! Let's build, learn, and grow together — one commit at a time. 🔥👨‍💻👩‍💻
+🎉 **I can’t wait to welcome new contributors** from GSSoC 2025 to this Foodie project family! Let's build, learn, and grow together — one commit at a time.
 
-## 🏆 **GSSoC 2025 Guidelines**
-
-### 📋 **For Participants**
-#### ✅ **Do's**
-- ✅ **Read documentation** thoroughly before contributing
-- ✅ **Follow code style** and project structure
-- ✅ **Write descriptive** commit messages
-- ✅ **Test your changes** before submitting PR
-- ✅ **Be respectful** and collaborative
-- ✅ **Ask questions** if you're unsure about anything
-
-#### ❌ **Don'ts**
-- ❌ **Don't spam** with multiple PRs for same issue
-- ❌ **Don't copy code** without understanding
-- ❌ **Don't make unnecessary** changes
-- ❌ **Don't ignore** code review feedback
-- ❌ **Don't forget** to update documentation when needed
-
-### 🎯 **Contribution Levels**
-| Level | Description | Points | Badge |
-|-------|-------------|--------|-------|
-| 🥉 **Beginner** | Fix typos, update docs, minor bug fixes | 5-10 | ![Beginner](https://img.shields.io/badge/Level-Beginner-green) |
-| 🥈 **Intermediate** | Add features, improve UI/UX, performance | 15-25 | ![Intermediate](https://img.shields.io/badge/Level-Intermediate-blue) |
-| 🥇 **Advanced** | Major features, architecture improvements | 30-50 | ![Advanced](https://img.shields.io/badge/Level-Advanced-red) |
 ---
-# 🚀 Quick Navigation 
+
+# 🚀 Quick Navigation
 
 > **📚 New to Foodie? Complete Developer Guide**  
 > 👉 **[LEARN.md](./LEARN.md)** – Architecture, setup, contribution pathways, and everything you need to get started!
@@ -58,52 +38,52 @@ A full-stack web application for browsing, listing, and managing a variety of fo
 ---
 ## 📑 Table of Contents
 
-* [🔧 Tech Stack](#-tech-stack)
-
-  * [🖥️ Frontend](#️-frontend)
-  * [🌐 Backend](#-backend)
-  * [🗄️ Database](#️-database)
-* [🚀 Getting Started](#-getting-started)
-
-  * [Prerequisites](#prerequisites)
-  * [📦 Installation](#-installation)
-  * [🐳 Docker Setup (Recommended)](#-docker-setup-recommended)
-  * [📦 Manual Installation](#-manual-installation)
-  * [🔧 Development Setup](#-development-setup)
-* [📁 Project Structure](#-project-structure)
-* [🐳 Docker Commands](#-docker-commands)
-* [🧪 Linting](#-linting)
-* [🧰 Scripts](#-scripts)
-* [📝 Notes](#-notes)
-* [🤝 Contributing](#-contributing)
-* [📄 License](#-license)
-* [🔗 References](#-references)
+- [🔧 Tech Stack](#-tech-stack)
+  - [🖥️ Frontend](#️-frontend)
+  - [🌐 Backend](#-backend)
+  - [🗄️ Database](#️-database)
+- [🚀 Getting Started](#-getting-started)
+  - [Prerequisites](#prerequisites)
+  - [📦 Installation](#-installation)
+  - [🐳 Docker Setup (Recommended)](#-docker-setup-recommended)
+  - [📦 Manual Installation](#-manual-installation)
+  - [🔧 Development Setup](#-development-setup)
+- [📁 Project Structure](#-project-structure)
+- [🐳 Docker Commands](#-docker-commands)
+- [🧪 Linting](#-linting)
+- [🧰 Scripts](#-scripts)
+- [📝 Notes](#-notes)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [🔗 References](#-references)
 
 ---
 ## 🔧 Tech Stack
 
 ### 🖥️ Frontend
 
-* **React 18.3** – User interface
-* **Vite** – Fast build tool and dev server
-* **React Router DOM** – Client-side routing
-* **ESLint** – Linting and code style enforcement
+- **React 18.3** – User interface
+- **Vite** – Fast build tool and dev server
+- **React Router DOM** – Client-side routing
+- **ESLint** – Linting and code style enforcement
 
 ### 🌐 Backend
 
-* **Node.js + Express** – REST API server
-* **CORS + JSON Middleware** – Cross-origin requests
-* **Multer** – File upload handling
-* **Modular API Routing** – Organized route structure
+- **Node.js + Express** – REST API server
+- **CORS + JSON Middleware** – Cross-origin requests
+- **Multer** – File upload handling
+- **Modular API Routing** – Organized route structure
 
 ### 🗄️ Database
 
-* **MongoDB** – NoSQL database for data storage
+- **MongoDB** – NoSQL database for data storage
 
 ### 🐳 DevOps
 
-* **Docker** – Containerization for all services
-* **Docker Compose** – Multi-service orchestration
+- **Docker** – Containerization for all services
+- **Docker Compose** – Multi-service orchestration
+
+
 ---
 ## 🚀 Getting Started
 
@@ -113,14 +93,14 @@ Ensure you have the following installed:
 
 **For Docker Setup (Recommended):**
 
-* Docker Desktop
-* Docker Compose
+- Docker Desktop
+- Docker Compose
 
 **For Manual Setup:**
 
-* Node.js (v16 or above)
-* npm or yarn
-* MongoDB (local or cloud)
+- Node.js (v16 or above)
+- npm or yarn
+- MongoDB (local or cloud)
 
 ---
 ### 📦 Installation
@@ -141,10 +121,10 @@ docker-compose up --build
 
 **Access the application:**
 
-* 🌐 **Frontend**: [http://localhost:3000](http://localhost:3000)
-* 🛠️ **Admin Panel**: [http://localhost:5173](http://localhost:5173)
-* 🔌 **Backend API**: [http://localhost:4000](http://localhost:4000)
-* 🗄️ **MongoDB**: localhost:27017
+- 🌐 **Frontend**: [http://localhost:3000](http://localhost:3000)
+- 🛠️ **Admin Panel**: [http://localhost:5173](http://localhost:5173)
+- 🔌 **Backend API**: [http://localhost:4000](http://localhost:4000)
+- 🗄️ **MongoDB**: localhost:27017
 
 **Docker Services:**
 
@@ -330,8 +310,8 @@ cd admin && npm run lint
 
 ## 📝 Notes
 
-* Make sure MongoDB is running locally or update `connectDB()` in `config/db.js` accordingly.
-* You can update the backend routes via `routes/foodRoute.js`.
+- Make sure MongoDB is running locally or update `connectDB()` in `config/db.js` accordingly.
+- You can update the backend routes via `routes/foodRoute.js`.
 
 ### Environment Variables
 
@@ -339,26 +319,25 @@ The application uses the following environment variables:
 
 **Backend:**
 
-* `MONGODB_URI`: MongoDB connection string
-* `JWT_SECRET`: Secret key for JWT tokens
-* `PORT`: Server port (default: 4000)
+- `MONGODB_URI`: MongoDB connection string
+- `JWT_SECRET`: Secret key for JWT tokens
+- `PORT`: Server port (default: 4000)
 
 **Frontend:**
 
-* `REACT_APP_API_URL`: Backend API URL
+- `REACT_APP_API_URL`: Backend API URL
 
 **Admin:**
 
-* `VITE_API_URL`: Backend API URL for Vite
+- `VITE_API_URL`: Backend API URL for Vite
 
 ### Database Configuration
 
-* **Docker**: MongoDB runs automatically with authentication
-
-  * Username: `admin`
-  * Password: `password123`
-  * Database: `foodie`
-* **Manual**: Update `connectDB()` in `backend/config/db.js`
+- **Docker**: MongoDB runs automatically with authentication
+  - Username: `admin`
+  - Password: `password123`
+  - Database: `foodie`
+- **Manual**: Update `connectDB()` in `backend/config/db.js`
 
 ### File Uploads
 
@@ -371,8 +350,8 @@ The application uses the following environment variables:
 
 We welcome contributions to the Foodie project! If you find this project helpful, consider starring the repo or opening an issue.
 
-* 📖 Help improve documentation
-* 🚀 For more info go to [CONTRIBUTING.md](CONTRIBUTING.md)
+- 📖 Help improve documentation
+- 🚀 For more info, go to [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### Development Workflow
 1. Fork the repository
@@ -385,6 +364,7 @@ We welcome contributions to the Foodie project! If you find this project helpful
 ## 📄 License
 This project is licensed under the [MIT License](./LICENSE)
 ---
+
 ## Contact 📝
 If you have any questions, feedback, or want to collaborate, feel free to reach out to the project maintainer:
 
@@ -395,9 +375,12 @@ If you have any questions, feedback, or want to collaborate, feel free to reach 
 - [Twitter](https://x.com/Abhishek899620)  
 - [Instagram](https://www.instagram.com/abhishekfarswal/)
 ---
+
 ## 🔗 References
-* [React](https://reactjs.org/)
-* [Vite](https://vitejs.dev/)
-* [Express](https://expressjs.com/)
-* [MongoDB](https://www.mongodb.com/)
-* [Docker](https://www.docker.com/)
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Docker](https://www.docker.com/)
+
