@@ -4,7 +4,6 @@ A full-stack web application for browsing, listing, and managing a variety of fo
 
 ![screenshot of Foodie Homepage-lightmode](images/foodie-home-light.png)
 <sup>Homepage – Light Mode</sup>
-
 ---
 
 ## 🌟GSSoc 
@@ -37,7 +36,6 @@ GSSoC is one of India’s **largest 3-month-long open-source programs** that enc
 > Skip to [Getting Started](#-getting-started) for quick setup instructions.
 
 ---
-
 ## 📑 Table of Contents
 
 - [🔧 Tech Stack](#-tech-stack)
@@ -60,7 +58,6 @@ GSSoC is one of India’s **largest 3-month-long open-source programs** that enc
 - [🔗 References](#-references)
 
 ---
-
 ## 🔧 Tech Stack
 
 ### 🖥️ Frontend
@@ -86,7 +83,6 @@ GSSoC is one of India’s **largest 3-month-long open-source programs** that enc
 * **Docker** – Containerization for all services
 * **Docker Compose** – Multi-service orchestration
 ---
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -105,7 +101,6 @@ Ensure you have the following installed:
 - MongoDB (local or cloud)
 
 ---
-
 ### 📦 Installation
 
 #### 🐳 Docker Setup (Recommended)
@@ -131,11 +126,10 @@ docker-compose up --build
 
 **Docker Services:**
 
-- **foodie-frontend**: React app (Port 3000)
-- **foodie-admin**: Admin panel (Port 5173)
-- **foodie-backend**: Express API (Port 4000)
-- **foodie-mongodb**: MongoDB database (Port 27017)
-
+* **foodie-frontend**: React app (Port 3000)
+* **foodie-admin**: Admin panel (Port 5173)
+* **foodie-backend**: Express API (Port 4000)
+* **foodie-mongodb**: MongoDB database (Port 27017)
 ---
 #### 📦 Manual Installation
 
@@ -150,7 +144,6 @@ cd backend && npm install && cd ..
 cd admin && npm install && cd ..
 ```
 ---
-
 ### 🔧 Development Setup
 
 #### Docker Development
@@ -200,7 +193,6 @@ Server runs on `http://localhost:4000`
 mongod
 ```
 ---
-
 ## 📁 Project Structure
 
 ```
@@ -229,7 +221,6 @@ Foodie/
 └── CONTRIBUTING.md
 ```
 ---
-
 ## 🐳 Docker Commands
 
 ### Basic Operations
@@ -296,7 +287,6 @@ cd frontend && npm run lint
 cd admin && npm run lint
 ```
 ---
-
 ## 🧰 Scripts
 
 ### Frontend & Admin Scripts
@@ -314,7 +304,6 @@ cd admin && npm run lint
 | ---------------- | ------------------------------------- |
 | `npm start`      | Start production server               |
 | `npm run server` | Start development server with nodemon |
-
 ---
 
 ## 📝 Notes
@@ -350,10 +339,9 @@ The application uses the following environment variables:
 
 ### File Uploads
 
-- Backend handles file uploads via Multer
-- Files are stored in `backend/uploads/` directory
-- Docker setup includes volume mounting for persistence
-
+* Backend handles file uploads via Multer
+* Files are stored in `backend/uploads/` directory
+* Docker setup includes volume mounting for persistence
 ---
 
 ## 🤝 Contributing
@@ -371,10 +359,12 @@ We welcome contributions to the Foodie project! If you find this project helpful
 5. Submit a pull request
 
 ---
-
 ## 📄 License
 This project is licensed under the [MIT License](./LICENSE)
 
+- [LinkedIn](https://www.linkedin.com/in/abhishekfarswal/?originalSubdomain=in)  
+- [Twitter](https://x.com/Abhishek899620)  
+- [Instagram](https://www.instagram.com/abhishekfarswal/)
 ---
 ## Contact 📝
 If you have any questions, feedback, or want to collaborate, feel free to reach out to the project maintainer:
