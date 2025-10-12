@@ -24,7 +24,7 @@ GSSoC is one of India’s **largest 3-month-long open-source programs** that enc
 - 🏆 Get recognized for their work
 - 📜 Receive certificates and swag!
 
-🎉 **I can’t wait to welcome new contributors** from GSSoC 2025 to this Foodie project family! Let's build, learn, and grow together — one commit at a time. 
+🎉 **I can’t wait to welcome new contributors** from GSSoC 2025 to this Foodie project family! Let's build, learn, and grow together — one commit at a time.
 
 ---
 
@@ -85,8 +85,9 @@ GSSoC is one of India’s **largest 3-month-long open-source programs** that enc
 
 ### 🐳 DevOps
 
-* **Docker** – Containerization for all services
-* **Docker Compose** – Multi-service orchestration
+- **Docker** – Containerization for all services
+- **Docker Compose** – Multi-service orchestration
+
 ---
 
 ## 🚀 Getting Started
@@ -391,8 +392,8 @@ If you have any questions, feedback, or want to collaborate, feel free to reach 
 
 ---
 ## 🔗 References
-* [React](https://reactjs.org/)
-* [Vite](https://vitejs.dev/)
-* [Express](https://expressjs.com/)
-* [MongoDB](https://www.mongodb.com/)
-* [Docker](https://www.docker.com/)
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Docker](https://www.docker.com/)
