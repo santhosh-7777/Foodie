@@ -7,6 +7,27 @@ A full-stack web application for browsing, listing, and managing a variety of fo
 
 ---
 
+## 🌟GSSoc 
+
+![GSSoC Logo](https://github.com/dimpal-yadav/Foodie/blob/main/images/GSSoC.png)
+
+🌟 **Exciting News...**
+
+🚀 This project is now an official part of GirlScript Summer of Code – GSSoC'25! 💻 We're thrilled to welcome contributors from all over India and beyond to collaborate, build, and grow *Foodie!* Let’s make learning and career development smarter – together! 🌟
+
+GSSoC is one of India’s **largest 3-month-long open-source programs** that encourages developers of all levels to contribute to real-world projects while learning, collaborating, and growing together.
+
+🌈 With **mentorship, community support**, and **collaborative coding**, it's the perfect platform for developers to:
+
+- ✨ Improve their skills
+- 🤝 Contribute to impactful projects
+- 🏆 Get recognized for their work
+- 📜 Receive certificates and swag!
+
+🎉 **I can’t wait to welcome new contributors** from GSSoC 2025 to this Foodie project family! Let's build, learn, and grow together — one commit at a time.
+
+---
+
 # 🚀 Quick Navigation
 
 > **📚 New to Foodie? Complete Developer Guide**  
@@ -65,6 +86,7 @@ A full-stack web application for browsing, listing, and managing a variety of fo
 - **Docker** – Containerization for all services
 - **Docker Compose** – Multi-service orchestration
 
+
 ---
 
 ## 🚀 Getting Started
@@ -117,7 +139,6 @@ docker-compose up --build
 - **foodie-mongodb**: MongoDB database (Port 27017)
 
 ---
-
 #### 📦 Manual Installation
 
 ```bash
@@ -130,7 +151,6 @@ cd frontend && npm install && cd ..
 cd backend && npm install && cd ..
 cd admin && npm install && cd ..
 ```
-
 ---
 
 ### 🔧 Development Setup
@@ -181,7 +201,6 @@ Server runs on `http://localhost:4000`
 # Make sure MongoDB is running locally
 mongod
 ```
-
 ---
 
 ## 📁 Project Structure
@@ -211,7 +230,6 @@ Foodie/
 ├── README.md
 └── CONTRIBUTING.md
 ```
-
 ---
 
 ## 🐳 Docker Commands
@@ -266,7 +284,6 @@ docker-compose exec mongodb mongodump --out /backup
 # View MongoDB logs
 docker-compose logs mongodb
 ```
-
 ---
 
 ## 🧪 Linting
@@ -280,7 +297,6 @@ cd frontend && npm run lint
 # Admin linting
 cd admin && npm run lint
 ```
-
 ---
 
 ## 🧰 Scripts
@@ -350,7 +366,6 @@ We welcome contributions to the Foodie project! If you find this project helpful
 - 🚀 For more info, go to [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### Development Workflow
-
 1. Fork the repository
 2. Create a feature branch
 3. Use Docker for consistent development environment
@@ -360,8 +375,19 @@ We welcome contributions to the Foodie project! If you find this project helpful
 ---
 
 ## 📄 License
+This project is licensed under the [MIT License](./LICENSE)
 
-This project is licensed under the MIT License.
+---
+
+## Contact 📝
+If you have any questions, feedback, or want to collaborate, feel free to reach out to the project maintainer:
+
+**Maintainer:** Abhishek Farshwal
+**GitHub:** [Foodie](https://github.com/Abhishek2634)  
+
+- [LinkedIn](https://www.linkedin.com/in/abhishekfarswal/?originalSubdomain=in)  
+- [Twitter](https://x.com/Abhishek899620)  
+- [Instagram](https://www.instagram.com/abhishekfarswal/)
 
 ---
 
@@ -372,3 +398,4 @@ This project is licensed under the MIT License.
 - [Express](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/)
 - [Docker](https://www.docker.com/)
+
