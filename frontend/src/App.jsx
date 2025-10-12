@@ -31,7 +31,6 @@ import MyProfile from "./pages/MyProfile/MyProfile";
 import MyOrder from "./pages/MyOrder/MyOrder";
 import Privacy from "./components/Privacy/privacy";
 import TermsOfService from "./components/TermsOfService/TermsOfService";
-import FeedbackReviews from "./components/FeedbackReviews/FeedbackReviews";
 import Delivery from "./pages/Delivery/Delivery";
 
 const App = () => {
@@ -40,8 +39,6 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
     return !!localStorage.getItem("authToken") || !!localStorage.getItem("user");
   });
-
-  const location = useLocation(); // Get current path
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 3000);
@@ -168,8 +165,7 @@ const App = () => {
           <CartSummaryBar />
           <AppDownload />
 
-          {/* FeedbackReviews only visible on Mobile App tab (/referral) */}
-          {location.pathname === "/mobile-app" && <FeedbackReviews />}
+          {/* Removed FeedbackReviews from here */}
 
           <Footer />
           <Chatbot />
