@@ -359,12 +359,29 @@ We welcome contributions to the Foodie project! If you find this project helpful
 5. Submit a pull request
 
 ---
+
+## Contributor
+
+A heartfelt thank you to all the contributors who have dedicated their time and effort to make this project a success.  
+Your contributions—whether it’s code, design, testing, or documentation—are truly appreciated! 🚀
+
+#### Thanks to all the wonderful contributors 💖
+
+<a href="https://github.com/Abhishek2634/Foodie/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Abhishek2634/Foodie" />
+</a>
+
+#### See full list of contribution from contributor [Contributor Graph](https://github.com/Abhishek2634/Foodie/graphs/contributors)
+
+---
+
 ## 📄 License
 This project is licensed under the [MIT License](./LICENSE)
 
 - [LinkedIn](https://www.linkedin.com/in/abhishekfarswal/?originalSubdomain=in)  
 - [Twitter](https://x.com/Abhishek899620)  
 - [Instagram](https://www.instagram.com/abhishekfarswal/)
+  
 ---
 ## Contact 📝
 If you have any questions, feedback, or want to collaborate, feel free to reach out to the project maintainer:
