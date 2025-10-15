@@ -196,29 +196,30 @@ mongod
 ## 📁 Project Structure
 
 ```
-Foodie/
-├── frontend/                 # React frontend application
-│   ├── src/
-│   ├── Dockerfile
-│   ├── .dockerignore
-│   └── package.json
-├── backend/                  # Express.js backend API
-│   ├── routes/
-│   ├── config/
-│   ├── uploads/
-│   ├── server.js
-│   ├── Dockerfile
-│   ├── .dockerignore
-│   └── package.json
-├── admin/                    # React admin panel
-│   ├── src/
-│   ├── Dockerfile
-│   ├── .dockerignore
-│   └── package.json
-├── docker-compose.yml        # Multi-service orchestration
-├── .dockerignore             # Root Docker ignore file
-├── README.md
-└── CONTRIBUTING.md
+Foodie/                       # Root folder of the project
+├── .github/                   # GitHub related configurations (actions, issue templates)
+│   ├── ISSUE_TEMPLATE/        # Templates for issues
+│   └── workflows/             # GitHub Actions workflows
+├── .vite/                     # Vite internal dependencies
+│   └── deps/                  # Vite dependency files
+├── admin/                     # Admin panel related code
+├── backend/                   # Backend server code
+├── frontend/                  # Frontend client code
+├── images/                    # Project images
+├── .dockerignore              # Files/folders to ignore in Docker
+├── .gitignore                 # Files/folders to ignore in Git
+├── AUTHENTICATION_SETUP.md    # Guide/setup for authentication
+├── CODE_OF_CONDUCT.md         # Code of conduct for contributors
+├── CONTRIBUTING.md            # Guidelines for contributing to the project
+├── LEARN.md                   # Learning resources/documentation
+├── LICENSE                    # License file
+├── README.md                  # Project readme
+├── SECURITY.md                # Security guidelines
+├── docker-compose.yml         # Docker Compose configuration
+├── package-lock.json          # NPM package lock file
+├── package.json               # NPM package configuration
+└── vercel.json                # Vercel deployment configuration
+
 ```
 ---
 ## 🐳 Docker Commands
