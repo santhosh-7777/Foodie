@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./Restaurants.css";
 import { Star, MapPin, Clock } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import searchIcon from "../../assets/frontend_assets/search_icon.png";
+
+
 
 const Restaurants = () => {
   const navigate = useNavigate();
@@ -90,15 +93,17 @@ const Restaurants = () => {
       </div>
 
       {/* 🔍 Search bar instead of buttons */}
-      <div className="search-bar">
-        <input
-          type="text"
-          placeholder="Search cuisine (e.g., Italian, Indian, American)..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="search-input"
-        />
-      </div>
+     <div className="search-bar">
+  <img src={searchIcon} alt="Search" className="search-icon" />
+  <input
+    type="text"
+    placeholder="Search cuisine (e.g., Italian, Indian, American)..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+    className="search-input"
+  />
+</div>
+
 
       <div className="restaurants-grid">
         {filteredRestaurants.length > 0 ? (
