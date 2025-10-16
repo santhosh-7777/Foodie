@@ -207,7 +207,7 @@ const Navbar = ({ setShowLogin, setIsLoggedIn }) => {
             <Link to="/cart" className="icon-button" aria-label="Go to cart">
               <ShoppingCart size={18} />
               {totalCartItems > 0 && (
-                <div className="cart-badge">{totalCartItems}</div>
+                <div className="cart-badge" >{totalCartItems}</div>
               )}
             </Link>
           </div>
