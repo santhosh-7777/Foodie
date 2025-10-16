@@ -7,7 +7,7 @@ import searchIcon from "../../assets/frontend_assets/search_icon.png";
 const Restaurants = () => {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
-  const [sortBy, setSortBy] = useState("default"); // default, rating, deliveryTime
+  const [sortBy, setSortBy] = useState("default"); // default, rating, deliveryTime, discountLowToHigh, discountHighToLow
   const [showDropdown, setShowDropdown] = useState(false);
 
   const restaurants = [
@@ -61,6 +61,11 @@ const Restaurants = () => {
     },
   ];
 
+  // Helper function to extract discount value from string
+  const getDiscountValue = (discountStr) => {
+    return parseInt(discountStr.match(/\d+/)[0]);
+  };
+
   // Filter restaurants by cuisine search
   const filteredRestaurants = restaurants.filter((restaurant) =>
     restaurant.cuisine.toLowerCase().includes(search.toLowerCase())
@@ -72,6 +77,10 @@ const Restaurants = () => {
       return b.rating - a.rating; // Highest rating first
     } else if (sortBy === "deliveryTime") {
       return a.deliveryMinutes - b.deliveryMinutes; // Fastest delivery first
+    } else if (sortBy === "discountLowToHigh") {
+      return getDiscountValue(a.discount) - getDiscountValue(b.discount); // Lowest discount first
+    } else if (sortBy === "discountHighToLow") {
+      return getDiscountValue(b.discount) - getDiscountValue(a.discount); // Highest discount first
     }
     return 0; // Default order
   });
@@ -102,6 +111,8 @@ const Restaurants = () => {
   const getSortLabel = () => {
     if (sortBy === "rating") return "Rating";
     if (sortBy === "deliveryTime") return "Delivery Time";
+    if (sortBy === "discountLowToHigh") return "Discount: Low to High";
+    if (sortBy === "discountHighToLow") return "Discount: High to Low";
     return "Default";
   };
 
@@ -158,6 +169,18 @@ const Restaurants = () => {
                 onClick={() => handleSortSelect("deliveryTime")}
               >
                 Delivery Time
+              </button>
+              <button 
+                className={`sort-option ${sortBy === "discountLowToHigh" ? "active" : ""}`}
+                onClick={() => handleSortSelect("discountLowToHigh")}
+              >
+                Discount: Low to High
+              </button>
+              <button 
+                className={`sort-option ${sortBy === "discountHighToLow" ? "active" : ""}`}
+                onClick={() => handleSortSelect("discountHighToLow")}
+              >
+                Discount: High to Low
               </button>
             </div>
           )}
