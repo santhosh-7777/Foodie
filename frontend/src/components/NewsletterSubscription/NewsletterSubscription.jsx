@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { IoMail } from 'react-icons/io5';
 import { MdClose } from 'react-icons/md';
@@ -7,7 +7,6 @@ import './NewsletterSubscription.css';
 const NewsletterSubscription = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const [showNoThanks, setShowNoThanks] = useState(false);
 
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -19,20 +18,6 @@ const NewsletterSubscription = () => {
     }
   };
 
-  const handleNoThanks = () => {
-    setShowNoThanks(true);
-    // Hide the newsletter section after a delay
-    setTimeout(() => {
-      const newsletterSection = document.querySelector('.newsletter-section');
-      if (newsletterSection) {
-        newsletterSection.style.display = 'none';
-      }
-    }, 500);
-  };
-
-  if (showNoThanks) {
-    return null;
-  }
 
   return (
     <div className="newsletter-section">
@@ -56,15 +41,6 @@ const NewsletterSubscription = () => {
               />
               <button type="submit" className="newsletter-subscribe-btn">
                 Subscribe
-              </button>
-            </div>
-            <div className="newsletter-actions">
-              <button
-                type="button"
-                onClick={handleNoThanks}
-                className="newsletter-no-thanks-btn"
-              >
-                No thanks
               </button>
             </div>
           </form>

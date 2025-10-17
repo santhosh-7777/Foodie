@@ -59,11 +59,12 @@ const Footer = () => {
             <li><MdAddCall className='icon' /><span>+1-214-723-889</span></li>
             <li><IoIosMail className='icon' /><span>Contact@foodie.com</span></li>
           </ul>
+          {/* Newsletter Subscription Section */}
+      <NewsletterSubscription />
         </div>
       </div>
 
-      {/* Newsletter Subscription Section */}
-      <NewsletterSubscription />
+      
 
       <hr />
       <p className="footer-copyright">
